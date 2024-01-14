@@ -15,7 +15,7 @@ const ProductItem = ({product}) => {
     <div className="card md:w-96 bg-base-100 shadow-xl">
         <figure className="relative">
             <img src={`${imageURL}`} alt={`${name}`} className="h-80 w-full" />
-            <div className="badge badge-secondary absolute top-3 right-3">
+            <div className="bg-blue-600 badge badge-secondary absolute top-3 right-3">
                 {category}
             </div>
         </figure>
@@ -25,11 +25,11 @@ const ProductItem = ({product}) => {
                 something.. messages
             </p>
         </div>
-        <div className="flex justify-between">
-            <p className="w-full">Available"{quantity}</p>
-            <p className="text-left">{price}$</p>
+        <div className="flex justify-between ml-6">
+            <p className="w-full">Available:{quantity}</p>
+            <p className="text-left">{price}฿</p>
         </div>
-        <button className="btn btn-sm btn-primary"
+        <button  className="bg-blue-600 text-white font-bold w-auto md:w-auto py-4 rounded-2xl"
         disabled={quantity === 0}
         onClick={handleAddToCart}>
             Buy Now
